@@ -1,0 +1,27 @@
+.header {
+    width: 100vw;
+
+    .header__wrap {
+        height: 5vw;
+        width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    
+        .header-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            gap: 24px;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 14px;
+        }
+    }
+}
