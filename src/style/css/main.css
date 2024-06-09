@@ -877,6 +877,282 @@ body {
   text-align: left;
 }
 
+/* 3 PAGE HTML */
+.List_of_items {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0fr 0fr 1fr 1fr 1fr 0fr 0fr;
+  gap: 10px 0px;
+  grid-template-areas: "url_history . ." "category-text . ." "row_1-items row_1-items row_1-items" "row_2-items row_2-items row_2-items" "row_3-items row_3-items row_3-items" "pagination pagination pagination" "Product_recommendation-contact_form Product_recommendation-contact_form .";
+}
+.List_of_items .url_history {
+  grid-area: url_history;
+}
+.List_of_items .category-text {
+  grid-area: category-text;
+}
+.List_of_items .row_1-items {
+  grid-area: row_1-items;
+}
+.List_of_items .row_2-items {
+  grid-area: row_2-items;
+}
+.List_of_items .row_3-items {
+  grid-area: row_3-items;
+}
+.List_of_items .pagination {
+  grid-area: pagination;
+}
+.List_of_items .Product_recommendation-contact_form {
+  grid-area: Product_recommendation-contact_form;
+}
+.List_of_items .url_history {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 24px;
+}
+.List_of_items .url_history .bold {
+  color: rgb(0, 0, 0);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.List_of_items .category-text {
+  color: rgb(0, 0, 0);
+  font-family: "Satoshi", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+.List_of_items .row_1-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.List_of_items .row_1-items .item .item_title {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.List_of_items .row_1-items .item .item_price {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+.List_of_items .row_1-items .item h3 {
+  font-size: 22px;
+}
+.List_of_items .row_1-items .item .item_img {
+  border-radius: 20px;
+  background: rgb(240, 238, 237);
+}
+.List_of_items .row_1-items .item .item_rating {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+.List_of_items .row_1-items .item .item_rating p span {
+  color: black;
+  font-weight: 600;
+}
+.List_of_items .row_2-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.List_of_items .row_2-items .item .item_title {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.List_of_items .row_2-items .item .item_price {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+.List_of_items .row_2-items .item h3 {
+  font-size: 22px;
+}
+.List_of_items .row_2-items .item .item_img {
+  border-radius: 20px;
+  background: rgb(240, 238, 237);
+}
+.List_of_items .row_2-items .item .item_rating {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+.List_of_items .row_2-items .item .item_rating p span {
+  color: black;
+  font-weight: 600;
+}
+.List_of_items .row_3-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.List_of_items .row_3-items .item .item_title {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.List_of_items .row_3-items .item .item_price {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+.List_of_items .row_3-items .item h3 {
+  font-size: 22px;
+}
+.List_of_items .row_3-items .item .item_img {
+  border-radius: 20px;
+  background: rgb(240, 238, 237);
+}
+.List_of_items .row_3-items .item .item_rating {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+.List_of_items .row_3-items .item .item_rating p span {
+  color: black;
+  font-weight: 600;
+}
+.List_of_items .pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.List_of_items .pagination .button-previous a {
+  width: 110px;
+  height: 36px;
+}
+.List_of_items .pagination .pages .choosen {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  color: rgb(0, 0, 0);
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgb(240, 238, 237);
+}
+.List_of_items .pagination .pages a {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.List_of_items .pagination .button-next a {
+  width: 86px;
+  height: 36px;
+}
+.List_of_items .Product_recommendation-contact_form {
+  margin-top: 40px;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper {
+  width: 1240px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 36px 64px 36px 64px;
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-title {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 36px 64px 36px 64px;
+  color: rgb(255, 255, 255);
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-form input[type=email] {
+  width: 349px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 12px 16px 12px 16px;
+  border-radius: 62px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 14px;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-form ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-form ::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.List_of_items .Product_recommendation-contact_form .contact_form__wrapper .contact_form-form .form-button {
+  width: 349px;
+  height: 46px;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px 12px 16px;
+  border-radius: 62px;
+  background: rgb(255, 255, 255);
+  /* Font text */
+  color: rgb(0, 0, 0);
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
 .rates_template_h2, .home_page .rates h2 {
   font-family: "Satoshi", sans-serif;
   font-size: 40px;
@@ -907,7 +1183,7 @@ body {
   margin-top: 72px;
 }
 
-.items_p_template, .New_Arrivals .items .item .item_rating p, .Top_Seller .items .item .item_rating p, .Product_detail .product .product-text .product-rating p, .Product_recommendation .items .item .item_rating p {
+.items_p_template, .New_Arrivals .items .item .item_rating p, .Top_Seller .items .item .item_rating p, .Product_detail .product .product-text .product-rating p, .Product_recommendation .items .item .item_rating p, .List_of_items .row_1-items .item .item_rating p, .List_of_items .row_2-items .item .item_rating p, .List_of_items .row_3-items .item .item_rating p {
   font-family: "Satoshi", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -917,7 +1193,7 @@ body {
   margin-left: 13px;
 }
 
-.items_h3_template, .New_Arrivals .items .item .item_title, .Top_Seller .items .item .item_title, .New_Arrivals .items .item h3, .Top_Seller .items .item h3, .Product_detail .product .product-text .item_price h3, .Product_recommendation .items .item .item_title, .Product_recommendation .items .item h3 {
+.items_h3_template, .New_Arrivals .items .item .item_title, .Top_Seller .items .item .item_title, .New_Arrivals .items .item h3, .Top_Seller .items .item h3, .Product_detail .product .product-text .item_price h3, .Product_recommendation .items .item .item_title, .Product_recommendation .items .item h3, .List_of_items .row_1-items .item .item_title, .List_of_items .row_1-items .item h3, .List_of_items .row_2-items .item .item_title, .List_of_items .row_2-items .item h3, .List_of_items .row_3-items .item .item_title, .List_of_items .row_3-items .item h3 {
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
   line-height: -1px;
@@ -925,13 +1201,13 @@ body {
   text-align: left;
 }
 
-.item_price_grey_template, .New_Arrivals .items .item .item_price .grey, .Top_Seller .items .item .item_price .grey, .Product_detail .product .product-text .item_price .grey, .Product_recommendation .items .item .item_price .grey {
+.item_price_grey_template, .New_Arrivals .items .item .item_price .grey, .Top_Seller .items .item .item_price .grey, .Product_detail .product .product-text .item_price .grey, .Product_recommendation .items .item .item_price .grey, .List_of_items .row_1-items .item .item_price .grey, .List_of_items .row_2-items .item .item_price .grey, .List_of_items .row_3-items .item .item_price .grey {
   color: grey;
   text-decoration-line: line-through;
   margin: 0px 8px;
 }
 
-.item_discount_grey_template, .New_Arrivals .items .item .item_price .discount, .Top_Seller .items .item .item_price .discount, .Product_detail .product .product-text .item_price .discount, .Product_recommendation .items .item .item_price .discount {
+.item_discount_grey_template, .New_Arrivals .items .item .item_price .discount, .Top_Seller .items .item .item_price .discount, .Product_detail .product .product-text .item_price .discount, .Product_recommendation .items .item .item_price .discount, .List_of_items .row_1-items .item .item_price .discount, .List_of_items .row_2-items .item .item_price .discount, .List_of_items .row_3-items .item .item_price .discount {
   width: 58px;
   height: 28px;
   /* Auto layout */
@@ -1024,4 +1300,19 @@ body {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+}
+
+/* 3 PAGE HTML */
+.pagination-previous_next_template, .List_of_items .pagination .button-previous a, .List_of_items .pagination .button-next a {
+  padding: 8px 14px 8px 14px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

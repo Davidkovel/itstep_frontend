@@ -150,3 +150,20 @@
     font-weight: 500;
     text-align: center;
 }
+
+
+/* 3 PAGE HTML */
+
+.pagination-previous_next_template {
+    padding: 8px 14px 8px 14px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: $font_family_satoshi;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+}
