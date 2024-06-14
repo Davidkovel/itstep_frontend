@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
     <link rel="stylesheet" href="./style/css/main.css">
 </head>
 <body>
     <header class="header">
         <div class="header__wrap">
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <a class="header-logo" href="index.html"><img src="./assets/img/svg/logo.svg" alt="logo"></a>
             <ul class="header-nav">
                 <li>Shop</li>
@@ -39,7 +45,7 @@
                 <img width="152px" height="167px" src="./assets/img/png/t-shirt green 3.png" alt="">
             </div>
             <div class="product-large_photo">
-                <img width="444px" height="530px" src="./assets/img/png/t-shirt green 4.png" alt="">
+                <img src="./assets/img/png/t-shirt green 4.png" alt="">
             </div>
             <div class="product-text">
                 <h2>One Life Graphic T-shirt</h2>
@@ -342,8 +348,8 @@
             </div>
             <div class="information">
                 <hr>
+                <p class="license">Shop.co © 2000-2023, All Rights Reserved</p>
                 <div class="method_payments">
-                    <p class="license">Shop.co © 2000-2023, All Rights Reserved</p>
                     <img width="46px" height="30px" src="./assets/img/svg/visa.svg" alt="visa">
                     <img width="46px" height="30px" src="./assets/img/svg/mastercard.svg" alt="mastercard">
                     <img width="46px" height="30px" src="./assets/img/svg/paypal.svg" alt="paypal">
@@ -353,5 +359,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const burgerMenu = document.querySelector('.burger-menu');
+        const headerNav = document.querySelector('.header-nav');
+
+        burgerMenu.addEventListener('click', function() {
+            headerNav.classList.toggle('open');
+        });
+        });
+    </script>
 </body>
 </html>

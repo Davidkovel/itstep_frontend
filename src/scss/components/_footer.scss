@@ -1,97 +1,164 @@
+@import 'breakpoints';
+
 .footer {
     width: 100vw;
-    height: 28vw;
+    height: auto;
     background-color: $background_footer;
     margin-top: 30px;
+
     .footer__wrap {
         width: 90vw;
         margin: 0 auto;
         display: grid; 
-        grid-auto-columns: 1fr; 
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 20px 1px; 
-        
-        .footer__wrap { grid-area: 1 / 1 / 3 / 6; }
-        .logo-social_networks { grid-area: 1 / 1 / 3 / 2; }
-        .columns { grid-area: 1 / 2 / 3 / 6; }
-        .column-company { grid-area: 1 / 2 / 3 / 3; }
-        .column-help { grid-area: 1 / 3 / 3 / 4; }
-        .column-FAQ { grid-area: 1 / 4 / 3 / 5; }
-        .column-resources { grid-area: 1 / 5 / 3 / 6; }
-        .information { grid-area: 3 / 1 / 4 / 6; }
-        .license { grid-area: 3 / 1 / 4 / 3; }
-        .method_payments { grid-area: 3 / 4 / 4 / 6; }
-        
+        gap: 20px 1px;
+
         .logo-social_networks {
+            grid-column: span 1;
             margin-top: 70px;
 
             .social_networks {
-                margin-top: 104px;  /* Поменять потом icons */
+                margin-top: 104px;
             }
         }
 
         .columns {
+            grid-column: span 4;
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin-top: 70px;
 
-            h4 {
-                margin-bottom: 26px;
-                color: rgb(0, 0, 0);
-                font-family: $font_family_satoshi;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 18px;
-                letter-spacing: 3px;
-                text-align: left;
-                text-transform: uppercase;
-            }
+            .column-company, .column-help, .column-FAQ, .column-resources {
+                h4 {
+                    margin-bottom: 26px;
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
 
-            ul {
-                color: rgba(0, 0, 0, 0.6);
-                font-family: $font_family_satoshi;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 19px;
-                letter-spacing: 0px;
-                text-align: left;
-                
-                li {
-                    margin: 20px 0px;
+                ul {
+                    color: rgba(0, 0, 0, 0.6);
+                    font-family: $font_family_satoshi;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19px;
+
+                    li {
+                        margin: 20px 0;
+                    }
                 }
             }
         }
 
         .information {
+            grid-column: span 5;
             margin-top: 34px;
+            display: flex;
+            flex-direction: column; /* Ensure elements are stacked in a column */
+            justify-content: space-between;
+            align-items: center;
+
+            hr {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .license {
+                width: 100%;
+                color: rgba(0, 0, 0, 0.6);
+                font-family: $font_family_satoshi;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 10px 0; /* Add margin for spacing */
+            }
 
             .method_payments {
                 display: flex;
-                margin-top: 25px;
-                align-items: center;
-                
-                .license {
-                    flex: 1;
+                align-self: flex-end;
+                margin-top: 10px;
+                margin-bottom: 30px;
+
+                img {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        height: auto;
+
+        .footer__wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logo-social_networks {
+                order: 1;
+                margin-top: 20px;
+
+                .social_networks {
+                    margin-top: 20px;
+                }
+            }
+
+            .columns {
+                order: 2;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-top: 20px;
+
+                .column-company, .column-help, .column-FAQ, .column-resources {
                     display: flex;
-                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    h4, ul {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .information {
+                order: 3;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
+                hr {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .license {
+                    text-align: center;
                     color: rgba(0, 0, 0, 0.6);
                     font-family: $font_family_satoshi;
                     font-size: 14px;
                     font-weight: 400;
-                    line-height: -1px;
-                    letter-spacing: 0%;
-                    text-align: right;
+                    margin: 10px 0; /* Add margin for spacing */
                 }
-                
-                img {
+
+                .method_payments {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
+                    margin-top: 10px;
+         
+
+                    img {
+                        margin: 0 5px;
+                    }
                 }
             }
         }
-    
     }
-
 }
