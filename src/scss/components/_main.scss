@@ -1337,9 +1337,6 @@
                     font-family: $font_family_satoshi;
                     font-size: 16px;
                     font-weight: 400;
-                    line-height: -1px;
-                    letter-spacing: 0%;
-                    text-align: left;
                 }
                 
                 .form-button {
@@ -2120,3 +2117,664 @@
         }
     }
 }
+
+
+/* 4 PAGE HTML || cart.html */
+
+.Cart {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0fr 0fr 1fr 1fr 0fr 1fr; 
+    gap: 20px 20px; 
+
+    .url_history { grid-area: 1 / 1 / 2 / 2; }
+    .cart-text { grid-area: 2 / 1 / 3 / 2; }
+    .Product_recommendation-contact_form { grid-area: 6 / 1 / 7 / 3; }
+    .adaptation_tablet { grid-area: 3 / 1 / 6 / 3; }
+    .cart-list_items { grid-area: 3 / 1 / 6 / 2; }
+    .item { grid-area: 3 / 1 / 6 / 2; }
+    .cart-order { grid-area: 3 / 2 / 5 / 3; }
+    
+    .url_history {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: $font_family_satoshi;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: -1px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-top: 24px;
+        margin-bottom: 16px;
+
+        .bold {
+            color: rgb(0, 0, 0);
+            font-family: $font_family_satoshi;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: -1px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    .cart-text {
+        color: rgb(0, 0, 0);
+        font-family: $font_family_satoshi;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .adaptation_tablet {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .cart-list_items {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px 24px 20px 24px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            margin-top: 26px;
+
+            .item_img {
+                display: flex;
+            }
+
+            .item_information {
+                margin-left: 16px;
+
+                .size {
+                    margin-top: 10px;
+                }
+
+                .size, .color {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 6px;
+                    @extend .cart-information_template;
+
+                    .value {
+                        color: red;
+                        @extend .cart-information_template;
+                        color: rgb(90, 90, 92);
+                    }
+                }
+
+                .price {
+                    margin-top: 6px;
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+            .item-icons {
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                
+                .item-button_add {
+                    margin-left: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 126px;
+                    height: 44px;
+                    padding: 12px 20px 12px 20px;
+                    border-radius: 62px;
+                    background: rgb(240, 240, 240);
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 16px;
+                    font-weight: 500;
+
+                    a {
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    @include dekstop {
+        .cart-list_items {
+            width: 55vw;
+            height: auto;
+            .item-icons {
+            }
+        }
+    }
+    
+    .cart-order {
+        width: 90%;
+        height: auto;
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px 24px 20px 24px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+
+        .order-text {
+            width: 179px;
+            height: 32px;
+            color: rgb(0, 0, 0);
+            font-family: $font_family_satoshi;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .order-information {
+            .subtotal {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                gap: 250px;
+                color: rgba(0, 0, 0, 0.6);
+                font-family: $font_family_satoshi;
+                font-size: 18px;
+                font-weight: 400;
+                text-align: left;
+
+                .price {
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: right;
+                }
+            }
+
+            .discount {
+                margin-bottom: 6px;
+                gap: 174px;
+                display: flex;
+                flex-direction: row;
+                color: rgba(0, 0, 0, 0.6);
+                font-family: $font_family_satoshi;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: -1px;
+                letter-spacing: 0%;
+                text-align: left;
+
+                .discount {
+                    color: rgb(255, 51, 51);
+                    font-family: $font_family_satoshi;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: right;
+                }
+            }
+
+            .delivery {
+                margin-bottom: 20px;
+                gap: 205px;
+                display: flex;
+                flex-direction: row;
+                align-items: center; /* Ensures items are centered vertically */
+                color: rgba(0, 0, 0, 0.6);
+                font-family: $font_family_satoshi;
+                font-size: 18px;
+                font-weight: 400;
+            
+                .price {
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }               
+
+            .total {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+                gap: 264px;
+
+                h4 {
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .order-promocode {
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+        
+            input[type=text] {
+                width: 326px;
+                height: 48px;
+                padding: 12px 16px 12px 16px;
+                border-radius: 62px;
+                background: rgb(240, 240, 240);
+                margin-bottom: 24px;
+            }
+
+            ::placeholder {
+                color: rgba(0, 0, 0, 0.4);
+                font-family: $font_family_satoshi;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .form-apply {
+                width: 119px;
+                height: 48px;
+                padding: 12px 16px 12px 16px;
+                border-radius: 62px;
+                background: rgb(0, 0, 0);
+
+                color: rgb(255, 255, 255);
+                font-family: $font_family_satoshi;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .order-checkout {
+            width: 457px;
+            height: 60px;
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 54px 16px 54px;
+            border-radius: 62px;
+            background: rgb(0, 0, 0);
+
+            a {
+                color: rgb(255, 255, 255);
+                font-family: $font_family_satoshi;
+                font-size: 16px;
+                font-weight: 500;
+                
+                img {
+                    width: 15.76px;
+                    height: 18.75px;
+                    align-items: center;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
+    @include dekstop {
+        .cart-order {
+            width: 36vw;
+            height: auto;
+            display: flex;
+
+            .order-information {
+                .subtotal p {
+                    margin-right: -10px;
+                }
+            }
+     
+
+            hr {
+                width: 100%;
+            }
+
+            .order-promocode {
+                input[type=text] {
+                    margin-bottom: 0;
+                }
+
+                button {
+                    margin-top: 10px;
+                }
+            }
+
+            .order-checkout {
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    @include tablet {
+        .adaptation_tablet {
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-list_items {
+            display: flex;
+            flex-direction: column;
+            align-items: center; // This will center the items horizontally
+            width: 100%; // Take full width of the container
+            order: 1;
+
+            .item {
+                width: 100%; // Ensure images take full width of their container
+                height: auto; // Maintain aspect ratio
+                object-fit: cover; // A
+            
+                .item-icons {
+                    width: 100%; // Ensure images take full width of their container
+                    height: auto; // Maintain aspect ratio
+                    object-fit: cover; // 
+                }
+            }
+        }
+    
+        .cart-order {
+            width: 100%;
+            display: flex;
+            
+            flex-direction: column;
+            align-items: center; 
+            order: 2; // This will ensure .cart-order comes after .cart-list_items
+            padding-top: 20px; // Add space between the items
+        }
+    }
+
+    @include mobile {
+        .cart-list_items {
+            .item {  
+                .item-icons {
+                    width: 40%;
+                    padding: 12px 20px 12px 20px;
+                    .item-button_add a{
+                        margin: 10px;
+                        img {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Product_recommendation-contact_form {
+        margin-top: 50px;
+        .contact_form__wrapper {
+            width: 1240px;
+            height: 180px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 36px 64px 36px 64px;
+            border-radius: 20px;
+            background: rgb(0, 0, 0);
+        
+            .contact_form-title {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 36px 64px 36px 64px;
+                color: rgb(255, 255, 255);
+                font-family: $font_family_rubik;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 45px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .contact_form-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                
+
+                input[type=email] {
+                    width: 349px;
+                    height: 48px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    margin-bottom: 14px;
+                }
+
+                ::placeholder {
+                    color: rgba(0, 0, 0, 0.4);
+                    font-family: $font_family_satoshi;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+                
+                .form-button {
+                    width: 349px;
+                    height: 46px;
+                    /* Auto layout */
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    
+                    /* Font text */
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+            
+        }
+
+    @include dekstop {
+        .contact_form__wrapper {
+            width: 95vw;
+        }
+    }
+
+    @include tablet {
+        .contact_form__wrapper {
+            width: auto;
+            height: 180px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 36px 64px 36px 64px;
+            border-radius: 20px;
+            background: rgb(0, 0, 0);
+
+            .contact_form-title {
+                color: rgb(255, 255, 255);
+                font-family: $font_family_rubik;
+                font-size: 26px !important;
+                font-weight: 700;
+                line-height: 1.2;
+                letter-spacing: 0%;
+                text-align: left;
+                margin: 0;
+                
+            }
+
+            .contact_form-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                
+                input[type=email] {
+                    width: 250px;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    margin-bottom: 14px;
+                }
+    
+                ::placeholder {
+                    color: rgba(0, 0, 0, 0.4);
+                    font-family: $font_family_satoshi;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+                
+                .form-button {
+                    width: 250px;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @include  mobile {
+        .contact_form__wrapper {
+            width: auto;
+            height: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            justify-content: center;
+
+        
+            .contact_form-title {
+                color: rgb(255, 255, 255);
+                font-family: $font_family_rubik;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 1.2;
+                letter-spacing: 0%;
+                text-align: left;
+                margin: 0;
+            }
+
+            .contact_form-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                
+                input[type=email] {
+                    width: 311px;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    margin-bottom: 14px;
+                }
+    
+                ::placeholder {
+                    color: rgba(0, 0, 0, 0.4);
+                    font-family: $font_family_satoshi;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+                
+                .form-button {
+                    width: 311px;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 16px 12px 16px;
+                    border-radius: 62px;
+                    background: rgb(255, 255, 255);
+                    
+                    color: rgb(0, 0, 0);
+                    font-family: $font_family_satoshi;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: -1px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+}
+
+/* ЗАМЕТКА !!!!!!!!!!!!!!
+
+ЕСЛИ ЕЛЕМЕНТЫ ЙДУТЬ ПИРАМИДКОЙ КОТОРЫЙ Я НЕ УСМОТРЕЛ ИЛИ НЕ ЗАМЕТИЛ
+ТО ЗАМЕНИТЬ КОД НА: 
+
+width: 100%;
+height: auto;
+object-fit: cover; 
+*/
