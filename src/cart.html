@@ -16,13 +16,13 @@
             </div>
             <a class="header-logo" href="index.html"><img src="./assets/img/svg/logo.svg" alt="logo"></a>
             <ul class="header-nav">
-                <li>Shop</li>
-                <li>On Sale</li>
-                <li>New Arrivals</li>
-                <li>Brands</li>
+                <a href="#"><li>Shop</li></a>
+                <a href="#"><li>On Sale</li></a>
+                <a href="#"><li>New Arrivals</li></a>
+                <a href="#"><li>Brands</li></a>
             </ul>
             <div class="header-icons">
-                <a href="#"><img src="./assets/img/svg/cart.svg" alt="cart"></a>
+                <a href="cart.html"><img src="./assets/img/svg/cart.svg" alt="cart"></a>
                 <a href="#"><img src="./assets/img/svg/profile.svg" alt="profile"></a>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="cart-list_items">
                 <div class="item">
                     <div class="item_img">
-                        <img width="124px" height="124px" src="./assets/img/png/gradient t-shirt.png" alt="gradient t-shirt">
+                        <a href="product_detail.html"><img width="124px" height="124px" src="./assets/img/png/gradient t-shirt.png" alt="gradient t-shirt"></a>
                     </div>
                     <div class="item_information">
                         <div class="item_title">
@@ -73,7 +73,7 @@
 
                 <div class="item">
                     <div class="item_img">
-                        <img width="124px" height="124px" src="./assets/img/png/shirt.png" alt="shirt">
+                        <a href="product_detail.html"><img width="124px" height="124px" src="./assets/img/png/shirt.png" alt="shirt"></a>
                     </div>
                     <div class="item_information">
                         <div class="item_title">
@@ -102,7 +102,7 @@
                 
                 <div class="item">
                     <div class="item_img">
-                        <img width="124px" height="124px" src="./assets/img/png/jeans.png" alt="jeans">
+                        <a href="product_detail.html"><img width="124px" height="124px" src="./assets/img/png/jeans.png" alt="jeans"></a>
                     </div>
                     <div class="item_information">
                         <div class="item_title">
@@ -247,8 +247,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const headerNav = document.querySelector('.header-nav');
 
-
-
+            burgerMenu.addEventListener('click', function() {
+                headerNav.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>

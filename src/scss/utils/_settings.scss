@@ -4,5 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: inherit; /* This will make the link use the color of its parent element */
+    text-decoration: none; 
 }
 

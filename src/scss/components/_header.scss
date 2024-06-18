@@ -15,9 +15,16 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 500;
             gap: 24px;
+            -webkit-transition: 0.7s;
+            transition: 0.7s;
+            border-bottom: 2px solid transparent;
+
+            a:hover {
+                border-bottom: 2px solid rgba(91, 89, 89, 0.5);
+            }
         }
 
         .header-icons {
@@ -80,7 +87,6 @@
             }
         }
 
-        /* Стили для открытия меню */
         .header-nav.open {
             display: flex;
         }

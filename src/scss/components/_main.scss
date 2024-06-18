@@ -195,12 +195,22 @@
     height: 122px;
     background-color: black;
 
+    @keyframes moveLeft {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
     ul {
         width: 90vw;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        animation: moveLeft 20s linear infinite;
 
         li {
             display: flex;
@@ -208,6 +218,8 @@
             margin-top: 44px;
         }
     }
+
+    
 
     @include tablet {
         width: 100vw;
@@ -238,7 +250,7 @@
         ul {
             display: flex;
             align-items: center;
-            overflow: auto;
+            
             li img {
                 display: flex;
                 width: 140px;
@@ -286,7 +298,6 @@
         margin-top: 20px;
         
         .item {
-            
             .item_title {
                 @extend .items_h3_template;
                 font-size: 20px;
